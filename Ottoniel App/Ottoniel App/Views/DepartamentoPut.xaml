@@ -3,11 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ottoniel_App.Views.DepartamentoPut"
              Title="Modificar">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Modificar"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="100" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="" x:Name="resultado" TextColor="Blue" FontSize="20"></Label>
+        <Entry Margin="40,0" Placeholder="Ingrese Id " Keyboard="Text" x:Name="idForm" Grid.Row="0" Grid.Column="0" />
+        <Entry Margin="40,0" Placeholder="Ingrese Nuevo Nombre " Keyboard="Text"  x:Name="nombreForm" Grid.Row="1" Grid.Column="0" />
+
+        <Button Text="Actualizar" Margin="70,70" BackgroundColor="#432874" 
+                    TextColor="#fff" CornerRadius="10" Grid.Row="3" Grid.Column="0" Clicked="Button_Clicked"></Button>
+        
+
+    </Grid>
 </ContentPage>

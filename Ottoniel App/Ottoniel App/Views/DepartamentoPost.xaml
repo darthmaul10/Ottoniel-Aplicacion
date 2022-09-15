@@ -8,7 +8,7 @@
         <Grid>
             <Grid.RowDefinitions>
 
-                <RowDefinition Height="200" ></RowDefinition>
+                <RowDefinition Height="100" ></RowDefinition>
                 <RowDefinition Height="*" ></RowDefinition>
                 <RowDefinition Height="*" ></RowDefinition>
 
@@ -16,13 +16,12 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                
             </Grid.ColumnDefinitions>
 
             <Label HorizontalOptions="Center" FontSize="20" TextColor="Green" Text="" x:Name="resultado" ></Label>
-            <Entry Placeholder="Nombre Departamento " Keyboard="Text"  x:Name="nombreForm" Grid.Row="0" Grid.Column="0" />
+            <Entry Margin="40,0" Placeholder="Nombre Departamento " Keyboard="Text"  x:Name="nombreForm" Grid.Row="0" Grid.Column="0" />
 
-            <Button Text="Grabar" Margin="50" BackgroundColor="#432874" 
+            <Button Text="Guardar" Margin="70,70" BackgroundColor="#432874" 
                     TextColor="#fff" CornerRadius="10" Grid.Row="3" Grid.Column="0" Clicked="Button_Clicked"></Button>
 
         </Grid>

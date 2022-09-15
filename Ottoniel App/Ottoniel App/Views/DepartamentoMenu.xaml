@@ -8,5 +8,6 @@
     <local:DepartamentoPost></local:DepartamentoPost>
     <local:DepartamentoPut></local:DepartamentoPut>
     <local:DepartamentoDelete></local:DepartamentoDelete>
+    <local:DepartamentoGet></local:DepartamentoGet>
     
 </TabbedPage>

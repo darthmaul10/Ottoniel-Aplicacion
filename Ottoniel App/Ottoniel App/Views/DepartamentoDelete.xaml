@@ -3,11 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ottoniel_App.Views.DepartamentoDelete"
              Title="Borrar">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Borrar"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        
+
+        <Entry Margin="40,0" Placeholder="Ingrese Id a Borrar"  x:Name="idForm" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"></Entry>
+        
+        <Button Margin="70,70" BackgroundColor="#432874" Text="Borrar" Clicked="Eliminar" 
+                    TextColor="#fff" CornerRadius="10" Grid.Row="2" Grid.Column="0"></Button>
+        <Label Text="" TextColor="Blue" FontSize="20" x:Name="resultado" ></Label>
+
+    </Grid>
+    
 </ContentPage>

@@ -11,7 +11,7 @@ namespace Ottoniel_App.Models
 
         public string ToJson()
         {
-            return "{ \"nombre\":\"" + nombre + "\" }";
+            return "{ \"id_departamento\":\"" + id_departamento + " \",\"nombre\":\"" + nombre + "\" }";
         }
     }
 }
