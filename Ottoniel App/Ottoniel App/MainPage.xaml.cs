@@ -1,4 +1,5 @@
-﻿using Ottoniel_App.Views;
+﻿using Ottoniel_App.Models;
+using Ottoniel_App.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,21 @@ namespace Ottoniel_App
         private async void Enviar_Departamento(object sender, EventArgs e)
         {
             await Navigation.PushAsync( new DepartamentoMenu());
+        }
+
+        private async void Enviar_Puesto(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PuestoMenu());
+        }
+
+        private async void Enviar_Empleado(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EmpleadoMenu());
+        }
+
+        private async void Enviar_Telefono(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TelefonoMenu());
         }
     }
 }
