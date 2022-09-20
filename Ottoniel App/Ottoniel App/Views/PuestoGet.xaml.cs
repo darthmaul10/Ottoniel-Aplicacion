@@ -24,14 +24,17 @@ namespace Ottoniel_App.Views
             getPuesto();
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            getPuesto();
+        }
 
         private async Task getPuesto()
         {
             using (var httpClient = new HttpClient())
             {
-
                 var response = await httpClient.GetAsync(url);
-
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
@@ -41,21 +44,14 @@ namespace Ottoniel_App.Views
 
                     for (int i = 0; i < contenido.Count; i++)
                     {
-
                         tempRes = tempRes + "id_puesto: " + contenido[i].id_puesto + " desc: " + contenido[i].desc + " id_departamento: " + contenido[i].id_departamento + "\n";
-
                     }
-
                     resultado.Text = tempRes;
                 }
                 else
                 {
                     resultado.Text = "Carga Fallida de Puesto";
                 }
-
-
-
-
             }
         }
     }

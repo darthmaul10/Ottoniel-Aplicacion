@@ -5,9 +5,10 @@
              Title="GET">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="resultado" Text=""
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="resultado"
+                   Text=""
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

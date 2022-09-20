@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ottoniel_App.Views.DepartamentoDelete"
-             Title="DELETE">
+             x:Class="Ottoniel_App.Views.PuestoDelete"
+             Title="Delete">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -21,7 +21,7 @@
         <Button Margin="70,70"
                 BackgroundColor="#4B4A54"
                 Text="Borrar"
-                Clicked="Eliminar"
+                Clicked="Button_Clicked"
                 TextColor="#fff"
                 CornerRadius="10"
                 Grid.Row="2"

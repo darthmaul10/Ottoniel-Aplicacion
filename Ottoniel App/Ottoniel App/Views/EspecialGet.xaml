@@ -4,10 +4,23 @@
              x:Class="Ottoniel_App.Views.EspecialGet"
              Title="Get">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="Center">
             <Label x:Name="resultado" Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Ingrese el id del Departamento"
+                   Margin="20,0" 
+                   Keyboard="Numeric"
+                   x:Name="idForm"
+                   />
+            <Button Text="Consultar"
+                    CornerRadius="10"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Margin="20,20,20,0"
+                    TextTransform="None"
+                    BackgroundColor="#82A0AA"
+                    Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

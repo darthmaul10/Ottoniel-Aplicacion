@@ -1,10 +1,7 @@
-﻿using Newtonsoft.Json;
-using Ottoniel_App.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,15 +11,20 @@ using Xamarin.Forms.Xaml;
 namespace Ottoniel_App.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DepartamentoDelete : ContentPage
+    public partial class PuestoDelete : ContentPage
     {
-        private string url = "https://desfrlopez.me/nosorio/api/departamento";
-        public DepartamentoDelete()
+        private string url = "https://desfrlopez.me/nosorio/api/puesto";
+        public PuestoDelete()
         {
             InitializeComponent();
         }
 
-        private async Task borrarDepartamentoAsync()
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            borrarPuestoAsync();
+        }
+
+        private async Task borrarPuestoAsync()
         {
             using (var httpClient = new HttpClient())
             {
@@ -33,14 +35,14 @@ namespace Ottoniel_App.Views
 
                 if (response.IsSuccessStatusCode)
                 {
-                    
+
                     var content = await response.Content.ReadAsStringAsync();
 
-                    
+
                     resultado.Text = "se borro";
 
                     //Departamento contenido = JsonConvert.DeserializeObject<Departamento>(content);
-                    
+
                 }
                 else
                 {
@@ -49,12 +51,5 @@ namespace Ottoniel_App.Views
                 idForm.Text = "";
             }
         }
-
-    private void Eliminar(object sender, EventArgs e)
-        {
-            borrarDepartamentoAsync();
-        }
-
-        
     }
 }
