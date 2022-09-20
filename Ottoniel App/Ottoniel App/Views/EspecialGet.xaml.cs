@@ -13,17 +13,20 @@ using Xamarin.Forms.Xaml;
 namespace Ottoniel_App.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EmpleadoGet : ContentPage
+    public partial class EspecialGet : ContentPage
     {
-        private string url = "https://desfrlopez.me/nosorio/api/empleado/";
-        public EmpleadoGet()
+        private string url = "https://desfrlopez.me/nosorio/api/departamento/1";
+
+        
+
+        public EspecialGet()
         {
             InitializeComponent();
-            getEmpleado();
+            getEspecial();
         }
 
 
-        private async Task getEmpleado()
+        private async Task getEspecial()
         {
             using (var httpClient = new HttpClient())
             {
@@ -33,14 +36,14 @@ namespace Ottoniel_App.Views
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    List<Empleado> contenido = JsonConvert.DeserializeObject<List<Empleado>>(content);
+                    List<Especial> contenido = JsonConvert.DeserializeObject<List<Especial>>(content);
 
                     string tempRes = "";
 
                     for (int i = 0; i < contenido.Count; i++)
                     {
-
-                        tempRes = tempRes + "id_empleado: " + contenido[i].id_empleado + " nombre: " + contenido[i].nombre + " fecha_nacimiento: " + contenido[i].fecha_nacimiento + " id_puesto: " + contenido[i].id_puesto + " nacionalidad: " + contenido[i].nacionalidad + "\n\n";
+                        tempRes = "Hola";
+                        //tempRes = tempRes + "id_telefono: " + contenido[i].id_telefono + " idempleado: " + contenido[i].idempleado + " telefono: " + contenido[i].telefono + "\n";
 
                     }
 
@@ -48,7 +51,7 @@ namespace Ottoniel_App.Views
                 }
                 else
                 {
-                    resultado.Text = "Carga Fallida de Empleado";
+                    resultado.Text = "Carga Fallida de Telefono";
                 }
 
 
@@ -56,5 +59,7 @@ namespace Ottoniel_App.Views
 
             }
         }
+
+
     }
 }

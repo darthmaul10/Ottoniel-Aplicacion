@@ -36,5 +36,20 @@ namespace Ottoniel_App
         {
             await Navigation.PushAsync(new TelefonoMenu());
         }
+
+        private async void Enviar_Reloj_marcador(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Reloj_marcadorMenu());
+        }
+
+        private async void Enviar_tipo_entrada(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new tipo_entradaMenu());
+        }
+
+        private async void Enviar_Especial(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EspecialMenu());
+        }
     }
 }

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ottoniel_App.Views.PuestoGet"
-             Title="Consultar">
+             Title="GET">
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="resultado" Text="Welcome to Xamarin.Forms!"

@@ -3,18 +3,60 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ottoniel_App.MainPage">
 
-    <StackLayout>
-        <Button Text="Departamento" Clicked="Enviar_Departamento" Margin="50,10" 
-                CornerRadius="10" Padding="20" BackgroundColor="#198754" TextColor="#fff"></Button>
+    <StackLayout BackgroundColor="#E7F2FA">
+        <Label Text="Otto Company" FontSize="40" FontAttributes="Bold" Margin="0,20,0,0" HorizontalOptions="Center" TextColor="#25468F"/>
+        <Frame VerticalOptions="FillAndExpand" Margin="20" CornerRadius="20" 
+               HasShadow="False" BackgroundColor="#000">
+            <StackLayout VerticalOptions="Center" >
 
-        <Button Text="Puesto" Clicked="Enviar_Puesto" Margin="50,10"
-                CornerRadius="10" Padding="20" BackgroundColor="#FFC107" TextColor="#fff"></Button>
+                <Grid RowSpacing="20" >
+                    
 
-        <Button Text="Empleado" Clicked="Enviar_Empleado" Margin="50,10"
-                CornerRadius="10" Padding="20" BackgroundColor="#0DCAF0" TextColor="#fff"></Button>
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition Height="200" ></RowDefinition>
+                            <RowDefinition Height="*" ></RowDefinition>
+                            <RowDefinition Height="*" ></RowDefinition>
+                             <RowDefinition Height="*" ></RowDefinition>
+                          <RowDefinition Height="*" ></RowDefinition> 
+
+                    </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                             <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Image Source="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/58505.png" Grid.Row="0" Grid.ColumnSpan="2"/>
+
+                <Button  Text="Departamento" TextTransform="None" Clicked="Enviar_Departamento"
+                CornerRadius="10" Padding="10" BackgroundColor="#4B4A54" TextColor="#fff" FontSize="Medium" Grid.Row="1" Grid.Column="0"></Button>
+
+                <Button Text="Puesto" TextTransform="None" Clicked="Enviar_Puesto"
+                CornerRadius="10" Padding="10" BackgroundColor="#677381" TextColor="#fff" FontSize="Medium" Grid.Row="1" Grid.Column="1"></Button>
+
+                <Button Text="Empleado" TextTransform="None" Clicked="Enviar_Empleado" 
+                CornerRadius="10" Padding="10" BackgroundColor="#82A0AA" TextColor="#fff" FontSize="Medium" Grid.Row="2" Grid.Column="0"></Button>
+
+                <Button Text="Telefono" TextTransform="None" Clicked="Enviar_Telefono" 
+                CornerRadius="10" Padding="10" BackgroundColor="#A3CFCD" TextColor="#fff" FontSize="Medium" Grid.Row="2" Grid.Column="1"></Button>
+
+                    <Button  Text="R_Marcador" TextTransform="None"  Clicked="Enviar_Reloj_marcador"
+                CornerRadius="10" Padding="10" BackgroundColor="#4B4A54" TextColor="#fff" FontSize="Medium" Grid.Row="3" Grid.Column="0"></Button>
+
+                    <Button Text="T_Entrada" TextTransform="None" Clicked="Enviar_tipo_entrada"
+                CornerRadius="10" Padding="10" BackgroundColor="#677381" TextColor="#fff" FontSize="Medium" Grid.Row="3" Grid.Column="1"></Button>
+
+                <Button Text="Especial" TextTransform="None" Clicked="Enviar_Especial"
+                CornerRadius="10" Padding="10" BackgroundColor="#82A0AA" TextColor="#fff" FontSize="Medium" Grid.Row="4" Grid.ColumnSpan="2"></Button>
+
+                
+
+                </Grid>
+            </StackLayout>
+        </Frame>
         
-        <Button Text="Telefono" Clicked="Enviar_Telefono" Margin="50,10"
-                CornerRadius="10" Padding="20" BackgroundColor="#6C757D" TextColor="#fff"></Button>
     </StackLayout>
 
 </ContentPage>

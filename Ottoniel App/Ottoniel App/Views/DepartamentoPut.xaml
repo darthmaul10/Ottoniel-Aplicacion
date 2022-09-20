@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ottoniel_App.Views.DepartamentoPut"
-             Title="Modificar">
+             Title="PUT">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -21,7 +21,7 @@
         <Entry Margin="40,0" Placeholder="Ingrese Id " Keyboard="Text" x:Name="idForm" Grid.Row="0" Grid.Column="0" />
         <Entry Margin="40,0" Placeholder="Ingrese Nuevo Nombre " Keyboard="Text"  x:Name="nombreForm" Grid.Row="1" Grid.Column="0" />
 
-        <Button Text="Actualizar" Margin="70,70" BackgroundColor="#432874" 
+        <Button Text="Actualizar" Margin="70,70" BackgroundColor="#4B4A54" 
                     TextColor="#fff" CornerRadius="10" Grid.Row="3" Grid.Column="0" Clicked="Button_Clicked"></Button>
         
 

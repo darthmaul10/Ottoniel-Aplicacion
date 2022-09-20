@@ -13,17 +13,17 @@ using Xamarin.Forms.Xaml;
 namespace Ottoniel_App.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EmpleadoGet : ContentPage
+    public partial class Reloj_marcadorGet : ContentPage
     {
-        private string url = "https://desfrlopez.me/nosorio/api/empleado/";
-        public EmpleadoGet()
+        private string url = "https://desfrlopez.me/nosorio/api/reloj_marcador/";
+        public Reloj_marcadorGet()
         {
             InitializeComponent();
-            getEmpleado();
+            getReloj_marcador();
         }
 
 
-        private async Task getEmpleado()
+        private async Task getReloj_marcador()
         {
             using (var httpClient = new HttpClient())
             {
@@ -33,14 +33,14 @@ namespace Ottoniel_App.Views
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    List<Empleado> contenido = JsonConvert.DeserializeObject<List<Empleado>>(content);
+                    List<Reloj_marcador> contenido = JsonConvert.DeserializeObject<List<Reloj_marcador>>(content);
 
                     string tempRes = "";
 
                     for (int i = 0; i < contenido.Count; i++)
                     {
 
-                        tempRes = tempRes + "id_empleado: " + contenido[i].id_empleado + " nombre: " + contenido[i].nombre + " fecha_nacimiento: " + contenido[i].fecha_nacimiento + " id_puesto: " + contenido[i].id_puesto + " nacionalidad: " + contenido[i].nacionalidad + "\n\n";
+                        tempRes = tempRes + "id_registro: " + contenido[i].id_registro + " id_tipo: " + contenido[i].id_tipo + " fecha: " + contenido[i].fecha + " hora: " + contenido[i].hora + " id_empleado: " + contenido[i].id_empleado + "\n\n";
 
                     }
 
@@ -48,7 +48,7 @@ namespace Ottoniel_App.Views
                 }
                 else
                 {
-                    resultado.Text = "Carga Fallida de Empleado";
+                    resultado.Text = "Carga Fallida de Reloj_marcador";
                 }
 
 

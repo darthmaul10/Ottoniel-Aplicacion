@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ottoniel_App.Views.DepartamentoDelete"
-             Title="Borrar">
+             Title="DELETE">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -20,8 +20,8 @@
         
 
         <Entry Margin="40,0" Placeholder="Ingrese Id a Borrar"  x:Name="idForm" Keyboard="Numeric" Grid.Row="1" Grid.Column="0"></Entry>
-        
-        <Button Margin="70,70" BackgroundColor="#432874" Text="Borrar" Clicked="Eliminar" 
+
+        <Button Margin="70,70" BackgroundColor="#4B4A54" Text="Borrar" Clicked="Eliminar" 
                     TextColor="#fff" CornerRadius="10" Grid.Row="2" Grid.Column="0"></Button>
         <Label Text="" TextColor="Blue" FontSize="20" x:Name="resultado" ></Label>
 
