@@ -44,7 +44,7 @@ namespace Ottoniel_App.Views
 
                     for (int i = 0; i < contenido.Count; i++)
                     {
-                        tempRes = tempRes + "id_puesto: " + contenido[i].id_puesto + " desc: " + contenido[i].desc + " id_departamento: " + contenido[i].id_departamento + "\n";
+                        tempRes = tempRes + "id_puesto: " + contenido[i].id_puesto + " desc: " + contenido[i].desc + " id_departamento: " + contenido[i].id_departamento + " nombre:_departamento: " + contenido[i].nombre_departamento + "\n";
                     }
                     resultado.Text = tempRes;
                 }
