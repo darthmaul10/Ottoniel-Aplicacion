@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ottoniel_App.Views.Reloj_marcadorPost"
+             Title="Post">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label HorizontalOptions="Center"
+               FontSize="20"
+               TextColor="Green"
+               Text=""
+               x:Name="resultado"></Label>
+        <Entry Margin="40,0"
+               Placeholder="ID Tipo de marcacion "
+               Keyboard="Numeric"
+               x:Name="idtipoForm"
+               Grid.Row="0"
+               Grid.Column="0" />
+        <Entry Margin="40,0"
+               Placeholder="ID Empleado "
+               Keyboard="Numeric"
+               x:Name="idempleadoForm"
+               Grid.Row="1"
+               Grid.Column="0" />
+        <Button Text="Guardar"
+                Margin="70,70"
+                BackgroundColor="#4B4A54"
+                TextColor="#fff"
+                CornerRadius="10"
+                Grid.Row="3"
+                Grid.Column="0"
+                Clicked="Button_Clicked"></Button>
+    </Grid>
+</ContentPage>

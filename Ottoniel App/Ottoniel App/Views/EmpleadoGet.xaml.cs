@@ -22,16 +22,24 @@ namespace Ottoniel_App.Views
             getEmpleado();
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            getEmpleado();
+        }
+
 
         private async Task getEmpleado()
         {
             using (var httpClient = new HttpClient())
             {
 
+                
                 var response = await httpClient.GetAsync(url);
 
                 if (response.IsSuccessStatusCode)
                 {
+                    
                     var content = await response.Content.ReadAsStringAsync();
                     List<Empleado> contenido = JsonConvert.DeserializeObject<List<Empleado>>(content);
 
@@ -39,8 +47,8 @@ namespace Ottoniel_App.Views
 
                     for (int i = 0; i < contenido.Count; i++)
                     {
-
-                        tempRes = tempRes + "id_empleado: " + contenido[i].id_empleado + " nombre: " + contenido[i].nombre + " fecha_nacimiento: " + contenido[i].fecha_nacimiento + " id_puesto: " + contenido[i].id_puesto + " nacionalidad: " + contenido[i].nacionalidad + "\n\n";
+                        
+                        tempRes = tempRes + "id_empleado: " + contenido[i].id_empleado + " nombre: " + contenido[i].nombre + "fecha_nacimiento: " + contenido[i].fecha_nacimiento + " id_puesto: " + contenido[i].id_puesto + " nacionalidad: " + contenido[i].nacionalidad + "\n\n";
 
                     }
 
@@ -48,7 +56,7 @@ namespace Ottoniel_App.Views
                 }
                 else
                 {
-                    resultado.Text = "Carga Fallida de Empleado";
+                    resultado.Text = "Carga Fallida de Empleados";
                 }
 
 

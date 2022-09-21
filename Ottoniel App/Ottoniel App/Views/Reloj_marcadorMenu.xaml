@@ -4,5 +4,9 @@
              x:Class="Ottoniel_App.Views.Reloj_marcadorMenu"
              xmlns:local="clr-namespace:Ottoniel_App.Views">
   <!--Pages can be added as references or inline-->
+    
+    <local:Reloj_marcadorPost />
+    <local:Reloj_marcadorPut />
+    <local:Reloj_marcadorDelete />
     <local:Reloj_marcadorGet></local:Reloj_marcadorGet>
 </TabbedPage>

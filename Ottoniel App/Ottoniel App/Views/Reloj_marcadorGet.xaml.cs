@@ -22,6 +22,12 @@ namespace Ottoniel_App.Views
             getReloj_marcador();
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            getReloj_marcador();
+        }
+
 
         private async Task getReloj_marcador()
         {
@@ -55,6 +61,11 @@ namespace Ottoniel_App.Views
 
 
             }
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ottoniel_App.Views.EmpleadoPost"
+             Title="Post">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label HorizontalOptions="Center"
+               FontSize="20"
+               TextColor="Green"
+               Text=""
+               x:Name="resultado"></Label>
+        <Entry Margin="40,0"
+               Placeholder="Nombre "
+               Keyboard="Text"
+               x:Name="nombreForm"
+               Grid.Row="0"
+               Grid.Column="0" />
+        <Entry Margin="40,0"
+               Placeholder="Fecha de nacimiento YYYY-MM-DD"
+               Keyboard="Telephone"
+               x:Name="fechaForm"
+               Grid.Row="1"
+               Grid.Column="0" />
+        <Entry Margin="40,0"
+               Placeholder="Id Puesto "
+               Keyboard="Text"
+               x:Name="idForm"
+               Grid.Row="2"
+               Grid.Column="0" />
+        <Entry Margin="40,0"
+               Placeholder="Nacionalidad "
+               Keyboard="Text"
+               x:Name="naciForm"
+               Grid.Row="3"
+               Grid.Column="0" />
+        <Button Text="Guardar"
+                Margin="20,20,20,0"
+                BackgroundColor="#4B4A54"
+                TextColor="#fff"
+                CornerRadius="10"
+                Grid.Row="4"
+                Grid.Column="0"
+                Clicked="Button_Clicked"></Button>
+    </Grid>
+</ContentPage>
